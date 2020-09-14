@@ -38,7 +38,9 @@
                               <div class="button" onclick="handleClick(3)">3</div>
                             </div>
                             <div class="calc-button-row">
-                                <div class="button" onclick="handleClick('back')"><</div>
+                                <div class="button" onclick="document.getElementById('number-input').value=document.getElementById('number-input').value.slice(0,-1)"><</div>
+                                <!-- <div class="button" onclick="handleClick(-1)"><</div> -->
+
                                 <div class="button" onclick="handleClick(0)">0</div>
                                 <div class="button" onclick="handleClick('clear')">C</div>
                             </div>
@@ -68,10 +70,12 @@
             if(num == "clear"){
                 document.getElementById("number-input").value = "";
             }
-            //if(a=="back"){
-              // document.getElementById("number-input").value.length = document.getElementById("number-input").value.length - 1;  
+           /* if(num== -1){
+                const a =  document.getElementById("number-input").value;
+                console.log(a);
+              document.getElementById("number-input").value = document.getElementById("number-input").value.slice(0, -1);  
 
-            //}
+           }*/
         }
         document.getElementById("submit").addEventListener("click",function(){
             const match = document.getElementById("match");
